@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell House For Cash | Get a Fair Cash Offer Today</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: #D4AF37;
+      --primary-dark: #b8962d;
+      --secondary: #1e1e1e;
+      --light: #f8f8f8;
+      --gray: #e0e0e0;
+      --dark-gray: #888;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: var(--light);
+      color: var(--secondary);
+      line-height: 1.6;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      background: #fff;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInDown 0.5s ease-in-out;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .logo span {
+      color: var(--secondary);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin: 0 15px;
+      position: relative;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--secondary);
+      font-weight: 500;
+      transition: color 0.3s;
+      padding: 5px 0;
+    }
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+    nav ul li a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s;
+    }
+    nav ul li a:hover:after {
+      width: 100%;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+    .hero {
+      padding: 150px 0 80px;
+      background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    }
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .hero-text {
+      flex: 1;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    .highlight {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .hero-image {
+      flex: 1;
+      position: relative;
+    }
+    .hero-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease-out;
+    }
+    .input-group {
+      display: flex;
+      max-width: 500px;
+      margin-top: 20px;
+    }
+    .input-group input {
+      flex: 1;
+      padding: 15px;
+      border: 1px solid var(--gray);
+      border-radius: 5px 0 0 5px;
+      font-size: 1rem;
+    }
+    .input-group button {
+      border-radius: 0 5px 5px 0;
+      padding: 0 25px;
+    }
+    section {
+      padding: 80px 0;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+    .section-title p {
+      color: var(--dark-gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .features {
+      background: #fff;
+    }
+    .features-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .feature-card h3 {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    .feature-card p {
+      color: #666;
+    }
+    .how-it-works {
+      background: var(--light);
+    }
+    .steps {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .step {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      text-align: center;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      position: relative;
+      animation: fadeInUp 0.5s ease forwards;
+    }
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 auto 20px;
+    }
+    .step h3 {
+      margin-bottom: 15px;
+    }
+    .step p {
+      color: #666;
+    }
+    .testimonials {
+      background: #fff;
+    }
+    .testimonials-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 30px;
+      padding: 20px 0;
+      scroll-snap-type: x mandatory;
+    }
+    .testimonial {
+      min-width: 300px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      scroll-snap-align: start;
+    }
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gray);
+      margin-right: 15px;
+      overflow: hidden;
+    }
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .author-info h4 {
+      margin-bottom: 5px;
+    }
+    .author-info p {
+      color: var(--dark-gray);
+      font-size: 0.9rem;
+    }
+    .blog-preview {
+      background: var(--light);
+    }
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .blog-card:hover {
+      transform: translateY(-10px);
+    }
+    .blog-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .blog-card:hover .blog-image img {
+      transform: scale(1.1);
+    }
+    .blog-content {
+      padding: 20px;
+    }
+    .blog-date {
+      color: var(--primary);
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    .blog-content h3 {
+      margin-bottom: 10px;
+    }
+    .blog-content p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .blog-read-more {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+    }
+    .blog-read-more i {
+      margin-left: 5px;
+      transition: transform 0.3s;
+    }
+    .blog-read-more:hover i {
+      transform: translateX(5px);
+    }
+    .cta {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+    }
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+    .contact-form {
+      background: #fff;
+      padding: 80px 0;
+    }
+    .form-container {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+    }
+    .form-info {
+      flex: 1;
+    }
+    .form-info h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .form-info p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .contact-details {
+      margin-top: 30px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    form {
+      flex: 1;
+      background: #f9f9f9;
+      padding: 40px;
+      border-radius: 10px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--gray);
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form textarea {
+      min-height: 120px;
+    }
+    footer {
+      background: var(--secondary);
+      color: white;
+      padding: 60px 0 20px;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .footer-about p {
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all 0.3s;
+    }
+    .social-link:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+    .footer-links h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    .footer-contact p {
+      color: #bbb;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .footer-contact i {
+      margin-right: 10px;
+      color: var(--primary);
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+      }
+      nav ul {
+        margin: 20px 0;
+      }
+      .hero-container {
+        flex-direction: column;
+      }
+      .hero-text {
+        text-align: center;
+      }
+      .input-group {
+        margin: 20px auto;
+      }
+      .form-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">SellHouse<span>ForCash</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-primary">Get Offer</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1>Sell Your <span class="highlight">House Fast</span> for Cash Today</h1>
+        <p>Get a fair cash offer within 24 hours. No repairs, no showings, no waiting. We buy houses in any condition.</p>
+        <div class="input-group">
+          <input type="text" placeholder="Enter your address">
+          <button class="btn btn-primary">Get My Offer</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Beautiful home">
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose <span class="highlight">Our Cash Offer</span></h2>
+        <p>We make selling your house simple, fast, and stress-free with our transparent process</p>
+      </div>
+      <div class="features-container">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Fast Closing</h3>
+          <p>Close in as little as 7 days or choose your own timeline. No waiting for buyer financing.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <h3>Fair Cash Offers</h3>
+          <p>Get a competitive cash offer based on current market value, with no hidden fees.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>No Repairs Needed</h3>
+          <p>We buy houses in any condition - no need to fix anything before selling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-title">
+        <h2>How It <span class="highlight">Works</span></h2>
+        <p>Selling your house for cash has never been easier with our simple 3-step process</p>
+      </div>
+      <div class="steps">
+        <div class="step" style="animation-delay: 0.1s;">
+          <div class="step-number">1</div>
+          <h3>Submit Your Info</h3>
+          <p>Fill out our simple form or call us to provide details about your property.</p>
+        </div>
+        <div class="step" style="animation-delay: 0.3s;">
+          <div class="step-number">2</div>
+          <h3>Get Your Offer</h3>
+          <p>We'll analyze your property and make you a fair cash offer within 24 hours.</p>
+        </div>
+        <div class="step" style="animation-delay: 0.5s;">
+          <div class="step-number">3</div>
+          <h3>Close & Get Paid</h3>
+          <p>Choose your closing date and walk away with cash in hand, no hassles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our <span class="highlight">Clients Say</span></h2>
+        <p>Hear from homeowners who sold their houses quickly and easily with us</p>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "I was facing foreclosure and needed to sell fast. SellHouseForCash gave me a fair offer and closed in just 10 days. They saved me from financial ruin!"
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J.">
+            </div>
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>Sold in Detroit, MI</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "After my divorce, I needed to sell our family home quickly. The traditional market would have taken months. SellHouseForCash made it so simple and fast."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T.">
+            </div>
+            <div class="author-info">
+              <h4>Michael Thompson</h4>
+              <p>Sold in Chicago, IL</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "I inherited a property that needed major repairs. Instead of dealing with contractors, I sold it to SellHouseForCash as-is. The process was seamless!"
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa M.">
+            </div>
+            <div class="author-info">
+              <h4>Lisa Martinez</h4>
+              <p>Sold in Phoenix, AZ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-preview">
+    <div class="container">
+      <div class="section-title">
+        <h2>Latest <span class="highlight">Blog Posts</span></h2>
+        <p>Helpful articles about selling your home, real estate trends, and more</p>
+      </div>
+      <div class="blog-container">
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Selling home fast">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">June 15, 2023</div>
+            <h3>5 Reasons to Consider a Cash Offer for Your Home</h3>
+            <p>Discover why more homeowners are choosing cash offers over traditional sales in today's market.</p>
+            <a href="blog-post.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Real estate market">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">May 28, 2023</div>
+            <h3>How to Sell an Inherited Property Quickly</h3>
+            <p>Learn the best options for selling an inherited property, especially when you need to sell fast.</p>
+            <a href="blog-post.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Home value">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">May 10, 2023</div>
+            <h3>Understanding Your Home's True Market Value</h3>
+            <p>Find out how cash buyers determine your home's value and how it compares to traditional sales.</p>
+            <a href="blog-post.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="blog.html" class="btn btn-outline">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Sell Your House Fast?</h2>
+      <p>Get your no-obligation cash offer today. No hidden fees, no repairs needed, no pressure.</p>
+      <a href="contact.html" class="btn btn-primary">Get My Free Offer</a>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <div class="container form-container">
+      <div class="form-info">
+        <h2>Have Questions? <span class="highlight">Contact Us</span></h2>
+        <p>Our team is ready to answer any questions you have about selling your house for cash. Fill out the form or contact us directly.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h4>Call Us</h4>
+              <p>(800) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email Us</h4>
+              <p>info@sellhouseforcash.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4>Visit Us</h4>
+              <p>123 Main Street, Suite 100<br>Anytown, USA 12345</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="property">Property Address</label>
+          <input type="text" id="property" name="property">
+        </div>
+        <div class="form-group">
+          <label for="message">How Can We Help?</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-about">
+          <a href="index.html" class="footer-logo">SellHouseForCash</a>
+          <p>We help homeowners sell their properties quickly and easily for cash, regardless of condition or situation.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Sell My House Fast</a></li>
+            <li><a href="#">Cash for Inherited Property</a></li>
+            <li><a href="#">Divorce Home Sale</a></li>
+            <li><a href="#">Foreclosure Help</a></li>
+            <li><a href="#">We Buy Ugly Houses</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Suite 100<br>Anytown, USA 12345</p>
+          <p><i class="fas fa-phone"></i> (800) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@sellhouseforcash.com</p>
+          <p><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 SellHouseForCash. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! We will contact you shortly.');
+      this.reset();
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Mobile menu toggle would go here
+  </script>
+</body>
+</html>
